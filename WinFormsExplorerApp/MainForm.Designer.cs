@@ -166,6 +166,19 @@
             imageListIcons16.ImageStream = (ImageListStreamer)resources.GetObject("imageListIcons16.ImageStream");
             imageListIcons16.TransparentColor = Color.Transparent;
             imageListIcons16.Images.SetKeyName(0, "FOLDER.png");
+            imageListIcons16.Images.SetKeyName(1, "ANY.png");
+            imageListIcons16.Images.SetKeyName(2, "CPP.png");
+            imageListIcons16.Images.SetKeyName(3, "CS.png");
+            imageListIcons16.Images.SetKeyName(4, "CSS.png");
+            imageListIcons16.Images.SetKeyName(5, "EXCEL.png");
+            imageListIcons16.Images.SetKeyName(6, "HTML.png");
+            imageListIcons16.Images.SetKeyName(7, "JPG.png");
+            imageListIcons16.Images.SetKeyName(8, "JS.png");
+            imageListIcons16.Images.SetKeyName(9, "PDF.png");
+            imageListIcons16.Images.SetKeyName(10, "PNG.png");
+            imageListIcons16.Images.SetKeyName(11, "POWER POINT.png");
+            imageListIcons16.Images.SetKeyName(12, "TXT.png");
+            imageListIcons16.Images.SetKeyName(13, "WORD.png");
             // 
             // listViewExplorer
             // 
@@ -185,6 +198,18 @@
             imageListIcons64.TransparentColor = Color.Transparent;
             imageListIcons64.Images.SetKeyName(0, "FOLDER.png");
             imageListIcons64.Images.SetKeyName(1, "ANY.png");
+            imageListIcons64.Images.SetKeyName(2, "CPP.png");
+            imageListIcons64.Images.SetKeyName(3, "CS.png");
+            imageListIcons64.Images.SetKeyName(4, "CSS.png");
+            imageListIcons64.Images.SetKeyName(5, "EXCEL.png");
+            imageListIcons64.Images.SetKeyName(6, "HTML.png");
+            imageListIcons64.Images.SetKeyName(7, "JPG.png");
+            imageListIcons64.Images.SetKeyName(8, "JS.png");
+            imageListIcons64.Images.SetKeyName(9, "PDF.png");
+            imageListIcons64.Images.SetKeyName(10, "PNG.png");
+            imageListIcons64.Images.SetKeyName(11, "POWER POINT.png");
+            imageListIcons64.Images.SetKeyName(12, "TXT.png");
+            imageListIcons64.Images.SetKeyName(13, "WORD.png");
             // 
             // MainForm
             // 

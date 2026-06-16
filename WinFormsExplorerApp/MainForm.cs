@@ -2,9 +2,28 @@ namespace WinFormsExplorerApp
 {
     public partial class MainForm : Form
     {
+        Dictionary<string, FileType> fileExtensions;
         public MainForm()
         {
             InitializeComponent();
+
+            fileExtensions = new()
+            {
+                { "cpp", FileType.Cpp },
+                { "cs", FileType.Cs },
+                { "css", FileType.Css },
+                { "eclx", FileType.Xclx },
+                { "html", FileType.Html },
+                { "jpg", FileType.Jpg },
+                { "js", FileType.Js },
+                { "pdf", FileType.Pdf },
+                { "png", FileType.Png },
+                { "pptx", FileType.Pptx },
+                { "txt", FileType.Txt },
+                { "docx", FileType.Docx },
+            };
+
+
             CreateMenuItems();
             CreateToolStripButtons();
 
@@ -54,7 +73,7 @@ namespace WinFormsExplorerApp
             {
                 ListViewItem directoryItem = new();
                 directoryItem.Text = new DirectoryInfo(directory).Name;
-                directoryItem.ImageIndex = 0;
+                directoryItem.ImageIndex = (int)FileType.Folder;
                 listViewExplorer.Items.Add(directoryItem);
             }
 
@@ -63,7 +82,16 @@ namespace WinFormsExplorerApp
             {
                 ListViewItem fileItem = new();
                 fileItem.Text = new FileInfo(file).Name;
-                fileItem.ImageIndex = 1;
+
+                string ext = new FileInfo(file).Extension
+                                               .Substring(1)
+                                               .ToLower();
+
+                if (fileExtensions.ContainsKey(ext))
+                    fileItem.ImageIndex = (int)fileExtensions[ext];
+                else
+                    fileItem.ImageIndex = (int)FileType.Any;
+
                 listViewExplorer.Items.Add(fileItem);
             }
         }
